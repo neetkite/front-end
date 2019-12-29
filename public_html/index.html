@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            body > *{
+                z-index: 2;
+                font-family: '2Font';
+            }
+            @font-face{
+                
+                font-family: '2Font';
+                src: url("font/zorque.ttf");
+            }
+           
+            
+            .is-preload {
+                background-image: url("pic/battlefield_4_siege_of_shanghai_game_soldier_army_4000x2250.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-color: transparent;
+                background-attachment: fixed;
+            }
+            #header{
+                margin: 10em 0 0 0;
+                color: whitesmoke;
+                padding-left: 5%;
+            }
+            #header h1{
+                font-size: 3.25em;
+                margin: 0 0 0.55em 0;
+                line-height: 1.25em;
+            }
+            #header p{
+                font-size: 1.35em;
+                line-height: 1.65em;
+                margin: 0 0 1.5em 0;
+                display: block;
+            }
+            #signup{
+                position: relative;
+                input[type="text"],input[type="email"]{width: 18em;}
+               
+            }
+            #signup span{
+                color: green;
+                background-color: transparent;
+                margin-left: 1em;
+                font-family: '2Font';
+                font-size: 1.35em;
+                border: 2px solid green;
+                font-weight: bold;
+                border-radius: 0.5em;
+                display: none;
+            }
+            #signup > *{
+                margin: 0 0 0 4em;
+            }
+            #i1{
+                width: 8em;
+                background-color: #1cb495;
+                color: white;
+                font-size: 14.667px;
+                font-family: '2Font';
+                height: 2.75em;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                border-radius: 6px;
+                font-weight: bold;
+                border-bottom: transparent;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-top: transparent;
+                border-bottom-left-radius: 6px;
+                cursor: pointer;
+                margin-left: 14.66px;
+                
+            }
+            input[type="email"],textArea{
+                background-color: transparent;
+                border: solid 2px gray;
+                color: gray;
+                display: block;
+                text-decoration: none;
+                border-radius: 6px;
+                border-image-slice: 100%;
+                width: 15em;
+                height: 2.75em;
+                float: left;
+                font-family: '2Font';
+                font-weight: bold;
+                transition: border-color 0.2s ease, background-color 0.2s ease;
+            }
+            input[type="email"]:focus{
+                border: solid 2px #1cb495;
+                box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+                opacity: 60;
+               
+            }
+            #i1:hover{
+                background-color: red;
+                transition: 1.2s;
+                font-family: "2Font";
+            }
+            ul.icons{
+                cursor: default;
+                list-style-type: none;
+            }
+            ul.icons li {
+                display: inline-block;
+                padding: 0 1.5em 0 0;
+                font-family: '2Font';
+                font-weight: bold;
+                
+            }
+            .icons li a{
+                color: black;
+                text-decoration: none;
+            }
+            .icons li a:hover{
+                color: #1cb495;
+                transition: 1.5s;
+                font-size: 1.1em;
+            }
+            ul > *{
+                margin: 11em 0 0 0;
+            }
+            ul li:hover{
+                
+                transition: 1.5s;
+                color: hotpink;
+            }
+            
+        </style>
+        <script>
+            var a=["music1.jpg","music2.jpg","music3.jpg"];
+            var i = 0;
+              function next(){
+                if(i<a.length-1){
+                    i++;
+                    var t=document.getElementsByClassName("is-preload");
+                    t.src=a[i];
+                    
+                }
+            }
+            function previous(){
+                if(i>0){
+                    i--;
+                    var t=document.getElementsByClassName("is-preload");
+                    t.src=a[i];
+                   
+                }
+            }
+            function emailCheck(){
+                var email=document.f.email;
+                var a=document.getElementByClassName("s1");
+                
+                var e=/[A-Za-z]+[0-9]*[@][A-Za-z]+([.][A-Za-z]+){1,2}%/;
+                if(e.test(email.value) == true){
+                    a.style.display="block";
+                }else{
+                    a.style.display="none";
+                }
+            }
+        </script>    
+    </head>
+    <body class="is-preload">
+        <div>
+            
+        <header id="header">
+            <h1>PLAYER</h1>
+            <p>Pick up your weapon <br/>And become the LEGEND</p>
+        </header>
+        
+            <form id="signup" name="f" action="Home.html" method="get">
+            <input type="email" name="email" id="email" placeholder="Email Address" required="required" />
+            <input id="i1" type="submit" value="Sign up" onclick=""/><span class="s1">&gamma; Thanks!</span>
+        </form>    
+        
+        <footer id="footer">
+            <ul class="icons" >
+                <li><a href="Home.html" class="Avc"><span class="lable">Home</span></a></li>
+                <li><a href="TheGame.html" class="MG"><span class="lable">Gallery</span></a></li>
+                <li><a href="AboutUs.html" class="zed"><span class="lable">About us</span></a></li>
+                <li><a href="ContactUsPage.html" class="Sia"><span class="lable">Contact</span></a></li>
+                              
+            </ul>
+        </footer>
+            
+        </div>
+    </body>
+</html>

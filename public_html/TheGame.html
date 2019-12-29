@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Gallery Games</title>
+        <style>
+            body{
+                background-image: url('pic/kratos.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            *{box-sizing: border-box;}
+            .header button:first-child{
+                height: 50px;
+                width: 30px;
+                text-align: center;
+                font-family: myFont;
+                background-color: black;
+                border-radius: 6px;
+                font-weight: lighter;
+                margin-left: 1%;
+                float: left;
+                margin-top:16%;
+                color: white;
+            }
+            #rightclick{
+                height: 50px;
+                width: 30px;
+                float: right;
+                background-color: black;
+                border-radius: 6px;
+                font-weight: lighter;
+                margin-right: 1%;
+                margin-top: 16%;
+                color: white;
+            }
+            .header{
+                width: 100%;
+                height: 300px;
+                border-bottom: 2px solid brown;
+                background-image: url('pic/call_of_duty_black_ops_13-wallpaper-1920x1080.jpg');
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: bottom;
+            }
+            .menu{
+                margin-bottom: 0;
+                position: absolute;
+                background-color: transparent;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .container{
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 100px;
+                margin-left: 2%;
+                background-color: transparent;
+                text-decoration: none;
+                float: left;
+            }
+            @font-face{
+                font-family: myFont;
+                src: url('font/zorque.ttf');
+            }
+            .logo a{
+                font-family: myFont;
+                font-size: 2.2em;
+                text-decoration: none;
+                color: #FF9900;
+                letter-spacing: 0.5em;
+                font-weight: lighter;
+            }
+            .logo{
+                float: left;
+            }
+            .navbar{
+                width: 50%;
+                background-color: transparent;
+                float: left;
+                margin-top: 3%;
+                margin-left: 16%;
+            }
+            .nav{
+                float: left;
+                width: 100%;
+                background-color: transparent;
+                list-style-type: none;
+                display: block;
+            }
+            .nav > li{
+                float: left;
+                padding-right:  9%;
+            }
+            .nav > li > a{
+                text-decoration: none;
+                font-family: myFont;
+                color: #FF9900;
+
+            }
+            .nav > li:hover{
+                border-bottom: 2px solid #ffffff;
+                border-top: 2px solid #ffffff;
+                transition: 0.6s;
+                cursor: pointer;
+            }
+            .theGallery h3{
+                text-align: center;
+                font-size: 3em;
+                font-family: myFont;
+                color: #FF9900;
+                letter-spacing: 0.2em;
+            }
+            .row{
+                background-color: transparent;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
+            }
+            .column{
+                flex: 50%;
+                padding: 0 6px;
+            }
+            .column img{
+                margin-top: 10px;
+                vertical-align: middle;
+                width: 100%;
+            }
+            .theGallery button{
+                font-family: myFont;
+                font-size: 1em;
+                margin-right: 2%;
+                background-color: #c2c1b3;
+
+                cursor: pointer;
+                border: 1px solid darkblue;
+                border-radius: 6px;
+            }
+            .theGallery button:hover{
+                background-color: darkred;
+                border-color: transparent;
+                transition: 0.6s;
+                font-size: 2em;
+            }
+            .firstButton{
+                margin-left: 45%;
+            }
+            .column img:hover{
+                border: 1.5px solid #1cb495;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+                transition: 0.1s;
+            }
+            /*  --------------------------------------------------------------------------------------*/
+            .detail{
+                width: 50%;
+                height: 50%;
+                position: fixed;
+                background-color: darkred;
+            }
+            .details{
+                width: 100%;
+                height: 100%;
+                float: left;
+            }
+            .details img{
+                float: left;
+                width: 50%;
+                height: 50%;
+                margin-right: 2%;
+            }
+            @font-face{
+                font-family: myFont2;
+                src: url('font/Atarian/SF Atarian System.ttf')
+            }
+            .details p{
+                line-height: 2em;
+                font-family: myFont2;
+                color: black;
+                font-size: 1.4em;
+
+            }
+            .footer{
+                width: 100%;
+                height: 300px;
+                float: left;
+                background-color: #EEE9E9;
+                margin-top: 2%;
+                opacity: 0.8;
+            }
+            .contact{
+                width: 25%;
+                height: 100%;
+                float: left;
+                background-color: transparent;
+                
+            }
+            .contact h5{
+                float: right;
+                letter-spacing: 0.2em;
+                font-family: myFont;
+                font-size: 2em;
+                margin-top: 10%;
+                margin-right: 5%;
+            }
+            .contact span{
+                float: right;
+                width: 100%;
+                padding-left: 30%;
+                text-align: center;
+                margin-bottom: 9%;
+                font-family: myFont;
+                font-size: 1em;
+            }
+            .lastestGame{
+                width: 40%;
+                height: 100%;
+                float: left;
+                background-color: transparent;
+            }
+            .lastestGame h5{
+                text-align: center;
+                letter-spacing: 0.2em;
+                font-family: myFont;
+                font-size: 2em;
+                margin-top: 6%;
+                margin-right: 5%;
+            }
+            .lastestGame img{
+                margin-left: 4%;
+                width: 20%;
+                float: left;
+                margin-top: 2%;   
+            }
+            .lastedGame img:hover{
+                cursor: pointer;
+            }
+            .lastCredit{
+                width: 35%;
+                height: 100%;
+                background-color: transparent;
+                float: left;
+            }
+            .lastCredit a{
+                text-decoration: none;
+            }
+            .lastCredit h4{
+                text-align: center;
+                font-family: myFont;
+                font-size: 2em;
+                text-decoration: none;
+                letter-spacing: 0.3em;
+                color: #FF9900;
+            }
+            .lastCredit p {
+                padding-left: 10%;
+                font-family: myFont;
+                font-size: 1.2em;
+                letter-spacing: 0.05em;
+                color: black;
+            }   
+        </style>
+        <script src="mainGalley.js"></script>
+    </head>
+    <body>
+        <div class="header" >
+            <button onclick="previous()">&LeftTriangle;</button>
+            <button id="rightclick" onclick="next()">&RightTriangle;</button>
+            <nav class="menu">
+                <div class="container">
+                    <div class="logo">
+                        <a href="Home.html"><h1>GameHub</h1></a>
+                    </div>
+                    <div class="navbar">
+                        <ul class="nav">
+                            <li class="effect"><a href="Home.html">
+                                    "Home"
+                                </a></li>
+                                <li class="effect"><a href="AboutUs.html">
+                                    "About us" 
+                                </a></li> 
+                                <li class="effect"><a href="TheGame.html">
+                                    "Games" 
+                                </a></li> 
+                                <li class="effect"><a href="ContactUsPage.html">
+                                    "Contact Us" 
+                                </a></li>      
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="theGallery">
+            <h3>The Game Gallery</h3>
+            <button class="changeButton firstButton" onclick="one()">1</button>
+            <button class="changeButton" onclick="two()">2</button>
+            <button class="changeButton" onclick="four()">4</button>
+            <div class="row"> 
+                <div class="column">
+                    <img src="pic/alice.jpg" onclick="showDetail(1)">
+                    <img src="pic/anthem-golem-concept-art-4k-pv-1920x1080.jpg" onclick="showDetail(2)">
+
+
+                </div>
+                <div class="column">
+                    <img src="pic/eder.jpg" onclick="showDetail(3)">
+                    <img src="pic/skriver-in-cyberpunk-2077-oz-1920x1080.jpg" onclick="showDetail(4)">
+
+
+                </div> 
+                <div class="column">
+                    <img src="pic/horizon_zero_dawn_2017_video_game-wallpaper-1920x1080.jpg" onclick="showDetail(5)">
+                    <img src="pic/battlefield_5_2018_video_game-wallpaper-1920x1080.jpg" onclick="showDetail(6)">
+
+
+                </div>
+                <div class="column">
+                    <img src="pic/chloe-price-max-caulfield-life-is-strange-4k-k4-1920x1080.jpg" onclick="showDetail(7)">
+                    <img src="pic/devil-may-cry-5-key-art-4k-q8-1920x1080.jpg" onclick="showDetail(8)">
+                </div>
+                <dialog id="detail1" class="detail">
+                    <div class="details">
+                        <img src="pic/alice.jpg">
+                        <p>Name: "Alice" <br />
+                            Developer: "Etranges Libellules" <br />
+                            Release: "March 2, 2010" <br />
+                            Describe: "Alice  allows player to guide, protect and aid Alice as she journeys through the world of wonderland....."<br />
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detail2" class="detail">
+                    <div class="details">
+                        <img src="pic/anthem-golem-concept-art-4k-pv-1920x1080.jpg">
+                        <p>Name: "Anthem" <br />
+                            Developer: "BioWare" <br />
+                            Release: "Feb 22, 2019" <br />
+                            Describe: "Anthem combine third-person shooter and action role-playing game element in a......"<br />
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detail3" class="detail">
+                    <div class="details">
+                        <img src="pic/eder.jpg">
+                        <p> Name: "Skyrim: Elder Scrolls 5 "<br />
+                            Developer: "Bethesda Game Studio"<br />
+                            Release: "November 11, 2011"<br />
+                            Describe: "TESV: S is an action RPG, playable from either a first or third-person. The player........",<br />
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detai4" class="detail">
+                    <div class="details">
+                        <img src="pic/skriver-in-cyberpunk-2077-oz-1920x1080.jpg">
+                        <p>Name: "Cyperpunk 2077 " <br />
+                            Developer: "CD Projekt Red"<br />
+                            Release: "Unknow"<br />
+                            Describe: "Cyberpunk is upcoming RPG played as FPP , a mercenary whole sex, hairstyle,........",
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detail5" class="detail">
+                    <div class="details">
+                        <img src="pic/horizon_zero_dawn_2017_video_game-wallpaper-1920x1080.jpg">
+                        <p> Name: "Horizon ZD "<br />
+                            Developer: "Guerilla Games"<br />
+                            Release: "28 February 2017"<br />
+                            Describe: "HZD is an action RPG. Player take control of Aloy, a hunter who ventures through a post.....",
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detail6" class="detail">
+                    <div class="details">
+                        <img src="pic/battlefield_5_2018_video_game-wallpaper-1920x1080.jpg">
+                        <p>Name: "Battlefield V "<br /> 
+                            Developer: "EA Dice"<br />
+                            Release: "Nov 20, 2018"<br />
+                            Describe: "BF V will focus extensively on party-based features and mechanic............",<br />
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detail7" class="detail">
+                    <div class="details">
+                        <img src="pic/chloe-price-max-caulfield-life-is-strange-4k-k4-1920x1080.jpg">
+                        <p>Name: "Life is Strange "<br /> 
+                            Developer: "Deck Nine Games"<br />
+                            Release: "August 31, 2017"<br />
+                            Describe: "LIS is a three part stand-alone adventure that serves as a prequel to Life is Strange....",<br />
+                        </p>
+                    </div>
+                </dialog>
+                <dialog id="detail8" class="detail">
+                    <div class="details">
+                        <img src="pic/devil-may-cry-5-key-art-4k-q8-1920x1080.jpg">
+                        <p>Name: "Devil may cry 5"<br /> 
+                            Developer: "Capcom"<br />
+                            Release:"March 8, 2019"<br />
+                            Describe: "THe gameplay will feature the return of Dante and Nero as playable character........",<br />
+                        </p>
+                    </div>
+                </dialog>
+            </div>
+            <script>
+
+                var phantu = document.getElementsByClassName("column");
+
+
+                var i;
+                function one() {
+                    for (i = 0; i < phantu.length; i++) {
+                        phantu[i].style.msFlex = "100%";  
+                        phantu[i].style.flex = "100%";
+                    }
+                }
+
+
+                function two() {
+                    for (i = 0; i < phantu.length; i++) {
+                        phantu[i].style.msFlex = "50%";  
+                        phantu[i].style.flex = "50%";
+                    }
+                }
+
+
+                function four() {
+                    for (i = 0; i < phantu.length; i++) {
+                        phantu[i].style.msFlex = "25%";  // chuyen hinh anh ve width 25%
+                        phantu[i].style.flex = "25%";
+                    }
+                }
+
+
+
+                var buttons = header.getElementsByClassName("changeButton");
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener("click", function () {
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                }
+                
+                
+                
+                function showDetail(n) {
+                      var k = n-1;
+                      
+                      var a = ['detail1','detail2','detail3','detail4','detail5','detail6','detai7','detail8'];
+                    
+                     document.getElementById(a[k]).showModal();
+                    }
+                
+            </script>  
+        </div>
+        <div class="footer">
+            <div class="contact">
+                <h5>Contact</h5>
+                <span>&#9993 ex@gmail.com</span>
+                <span>&#x260E 123456</span>
+                <span>&#x2706 456789</span>
+                <span>&#9983 Location,k......</span>
+            </div>
+            <div class="lastestGame">
+                <h5>Lastest Games</h5>
+                <br />
+                <img src="pic/anthem-golem-concept-art-4k-pv-1920x1080.jpg">
+                <img src="pic/beyond-good-and-evil-2-2017-74-1920x1080.jpg">
+                <img src="pic/chloe-price-max-caulfield-life-is-strange-4k-k4-1920x1080.jpg">
+                <img src="pic/darksiders-iii-2018-4k-3c-1920x1080.jpg">
+                <img src="pic/devil-may-cry-5-key-art-4k-q8-1920x1080.jpg">
+                <img src="pic/franklin-clinton-gta-v-dk-1920x1080.jpg">
+                <img src="pic/god-of-war-4-atreus-8e-1920x1080.jpg">
+                <img src="pic/horizon_zero_dawn_2017_video_game-wallpaper-1920x1080.jpg">
+            </div>
+            <div class="lastCredit">
+                <a href="Home.html"><h4>GameHUB</h4></a>
+                <p>This is the describe part !! Insert whatever you want!!</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            body{
+                background-image: url('pic/horizon_zero_dawn_2017_video_game-wallpaper-1920x1080.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            *{box-sizing: border-box;}
+            .header button:first-child{
+                height: 50px;
+                width: 30px;
+                text-align: center;
+                font-family: myFont;
+                background-color: black;
+                border-radius: 6px;
+                font-weight: lighter;
+                margin-left: 1%;
+                float: left;
+                margin-top:16%;
+                color: white;
+            }
+            #rightclick{
+                height: 50px;
+                width: 30px;
+                float: right;
+                background-color: black;
+                border-radius: 6px;
+                font-weight: lighter;
+                margin-right: 1%;
+                margin-top: 16%;
+                color: white;
+            }
+            .header{
+                width: 100%;
+                height: 300px;
+                border-bottom: 2px solid brown;
+                background-image: url('pic/call_of_duty_black_ops_13-wallpaper-1920x1080.jpg');
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: bottom;
+            }
+            .menu{
+                margin-bottom: 0;
+                position: absolute;
+                background-color: transparent;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .container{
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 100px;
+                margin-left: 2%;
+                background-color: transparent;
+                text-decoration: none;
+                float: left;
+            }
+            @font-face{
+                font-family: myFont;
+                src: url('font/zorque.ttf');
+            }
+            .logo a{
+                font-family: myFont;
+                font-size: 2.2em;
+                text-decoration: none;
+                color: #FF9900;
+                letter-spacing: 0.5em;
+                font-weight: lighter;
+            }
+            .logo{
+                float: left;
+            }
+            .navbar{
+                width: 50%;
+                background-color: transparent;
+                float: left;
+                margin-top: 3%;
+                margin-left: 16%;
+            }
+            .nav{
+                float: left;
+                width: 100%;
+                background-color: transparent;
+                list-style-type: none;
+                display: block;
+            }
+            .nav > li{
+                float: left;
+                padding-right:  9%;
+            }
+            .nav > li > a{
+                text-decoration: none;
+                font-family: myFont;
+                color: #FF9900;
+
+            }
+            .nav > li:hover{
+                border-bottom: 2px solid #ffffff;
+                border-top: 2px solid #ffffff;
+                transition: 0.6s;
+                cursor: pointer;
+            }
+
+
+            .trending{
+                width: 100%;
+                height: 550px;
+                float: left;
+                background-color: black;
+                background-image: url('pic/bg2.jpg');
+                background-attachment: fixed;
+                background-size: cover;
+                margin-top: 2%;
+                border-bottom: 2px solid brown;
+            }
+            .Trendinggame h1{
+                text-align: center;
+                font-family: myFont;
+                font-size: 3em;
+                color: #FF9900;
+            }
+            .mySlides {
+                display: none;
+                width: 50%;
+                height: 30%;
+                margin-left: 25%;
+            }
+            img {vertical-align: middle;}
+
+
+            .slideshow {
+                width: 100%;
+                position: relative;
+                margin: auto;
+                margin-top: 2em;
+            }
+
+
+            .text {
+                color: #FF9900;
+                font-size: 1.2em;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                font-family: myFont;
+            }
+
+
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+                font-family: myFont;
+            }
+
+
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active {
+                background-color: #717171;
+            }
+
+
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            .service{
+                width: 100%;
+                height: 500px;
+                background-color: #EEE9E9;
+                float: left;
+                margin-top: 2%;
+            }
+            .service h2{
+                font-family: myFont;
+                font-size: 2em;
+                text-align: center;
+                margin-top: 5%;
+                color: #FF9900;
+                letter-spacing: 0.1em;
+                width: 100%;
+                float: left;
+                background-color: transparent;
+            }
+            .servicesMenu{
+                width: 100%;
+                height: 73%;
+                background-color:transparent;
+                float: left;
+            }
+            .theServices{
+                width: 20%;
+                height: 100%;
+                background-color: transparent;
+                float: left;
+                margin-right: 4%;
+            }
+            .service1{
+                margin-left: 4%;
+            }
+            .theServices img{
+                width: 84px;
+                height: 84px;
+                border-radius: 50%;
+                border: none;
+                margin-left: 35%;
+                margin-top: 15%;
+                background-color: #EE2C2C;
+            }
+            .theServices h4{
+                text-align: center;
+                font-family: myFont;
+                font-size: 2em;
+                color: black;
+                margin-bottom: 0;
+            }
+            .theServices p{
+                text-align: center;
+                font-size: 1em;
+                font-family: myFont;
+                color: #CDC9C9;
+            }
+            .theServices button{
+                background-color: transparent;
+                border: 2px solid #EE2C2C;
+                color: #EE2C2C;
+                height: 40px;
+                margin-left: 10%;
+                font-family: myFont;
+            }
+            .theServices:hover{
+                border: 1px solid #0000EE;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+            }
+            .theServices button:hover{
+                border: none;
+                background-color: #0000EE;
+                color: white;
+
+            }
+            .newgame{
+                margin-top: 2%;
+                background-color: transparent;
+                width: 100%;
+                float: left;
+                height: 500px;
+                background-image: url('pic/bg3.jpg');
+                background-attachment: fixed;
+                background-size: cover;
+                border-bottom: 2px solid brown;
+                
+            }
+            .newgame h6{
+                text-align: center;
+                font-size: 2em;
+                font-family: myFont;
+                color: #FF9900;
+                margin-top: 1%;
+                float: left;
+                width: 100%;
+            }
+
+
+            .picture {
+                position: relative;
+                width: 20%;
+                float: left;
+                
+                margin: 0 0 1% 4%;
+            }
+
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .textRun {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: transparent;
+                overflow: hidden;
+                width: 100%;
+                height: 0;
+                transition: 0.5s ;
+                font-family: myFont;
+                color: #717171;
+            }
+
+            .picture:hover .textRun {
+                height: 100%;
+                
+            }
+            .picture:hover .image{
+                opacity: 0.6;
+                
+            }
+
+            .nameGame {
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .footer{
+                width: 100%;
+                height: 300px;
+                float: left;
+                background-color: #EEE9E9;
+                margin-top: 2%;
+                opacity: 0.8;
+            }
+            .contact{
+                width: 25%;
+                height: 100%;
+                float: left;
+                background-color: transparent;
+                
+            }
+            .contact h5{
+                float: right;
+                letter-spacing: 0.2em;
+                font-family: myFont;
+                font-size: 2em;
+                margin-top: 10%;
+                margin-right: 5%;
+            }
+            .contact span{
+                float: right;
+                width: 100%;
+                padding-left: 30%;
+                text-align: center;
+                margin-bottom: 9%;
+                font-family: myFont;
+                font-size: 1em;
+            }
+            .lastestGame{
+                width: 40%;
+                height: 100%;
+                float: left;
+                background-color: transparent;
+            }
+            .lastestGame h5{
+                text-align: center;
+                letter-spacing: 0.2em;
+                font-family: myFont;
+                font-size: 2em;
+                margin-top: 6%;
+                margin-right: 5%;
+            }
+            .lastestGame img{
+                margin-left: 4%;
+                width: 20%;
+                float: left;
+                margin-top: 2%;   
+            }
+            .lastedGame img:hover{
+                cursor: pointer;
+            }
+            .lastCredit{
+                width: 35%;
+                height: 100%;
+                background-color: transparent;
+                float: left;
+            }
+            .lastCredit a{
+                text-decoration: none;
+            }
+            .lastCredit h4{
+                text-align: center;
+                font-family: myFont;
+                font-size: 2em;
+                text-decoration: none;
+                letter-spacing: 0.3em;
+                color: #FF9900;
+            }
+            .lastCredit p {
+                padding-left: 10%;
+                font-family: myFont;
+                font-size: 1.2em;
+                letter-spacing: 0.05em;
+                color: black;
+            }
+        </style>
+        <script>
+            var a = ["pic/bg1.jpg", "pic/bg2.jpg", "pick/bg3.jpg"];
+            var i = 0;
+            function next() {
+                if (i < a.length - 1) {
+                    i++;
+                    var t = document.getElementsByClassName("header");
+                    t.src = a[i];
+
+                }
+            }
+            function previous() {
+                if (i > 0) {
+                    i--;
+                    var t = document.getElementsByClassName("header");
+                    t.src = a[i];
+
+                }
+            }
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header" >
+            <button onclick="previous()">&LeftTriangle;</button>
+            <button id="rightclick" onclick="next()">&RightTriangle;</button>
+            <nav class="menu">
+                <div class="container">
+                    <div class="logo">
+                        <a href="Home.html"><h1>GameHub</h1></a>
+                    </div>
+                    <div class="navbar">
+                        <ul class="nav">
+                            <li class="effect"><a href="Home.html">
+                                    "Home"
+                                </a></li>
+                                <li class="effect"><a href="AboutUs.html">
+                                    "About us" 
+                                </a></li> 
+                                <li class="effect"><a href="TheGame.html">
+                                    "Games" 
+                                </a></li> 
+                                <li class="effect"><a href="ContactUsPage.html">
+                                    "Contact Us" 
+                                </a></li>      
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="trending">
+            <div class="Trendinggame"><h1>Trending Games</h1></div>
+            <div class="slideshow">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="pic/cod.jpg" style="width:100%">
+                    <div class="text">COD: Black Ops 4</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="pic/scarlet-spiderman-gw-1920x1080.jpg" style="width:100%">
+                    <div class="text">Marvel's Spiderman</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="pic/oblivion-fortnite-season-6-4k-fq-1920x1080.jpg" style="width:100%">
+                    <div class="text">Fortnite</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="pic/overkills-the-walking-dead-5k-22-1920x1080.jpg" style="width:100%">
+                    <div class="text">Overkill's The Walking Dead</div>
+                </div>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+            </div>
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 3000); // set time 3s de doi anh
+                }
+            </script>
+        </div>
+        <div class="service">
+            <h2>Service</h2>
+            <div class="servicesMenu">
+                <div class="theServices service1">
+                    <img src="pic/phonen.png">
+                    <h4>FAQ</h4>
+                    <p>For any question about us you can call this number: +84 9xxxxxx</p>
+                    <form action="ComingSoon.html" method="get">
+                    <button>Read more...</button>
+                    </form>
+                </div>
+                <div class="theServices">
+                    <img src="pic/cash.jpg">
+                    <h4>FAQ</h4>
+                    <p>To play game in trial phase, you can pay to order</p>
+                    <form action="ComingSoon.html" method="get">
+                    <button>Read more...</button>
+                    </form>
+                </div>
+                <div class="theServices">
+                    <img src="pic/support.jpg">
+                    <h4>Online support</h4>
+                    <p>For any problem we can help you by online XDD</p>
+                    <form action="ComingSoon.html" method="get">
+                    <button>Read more...</button>
+                    </form>
+                </div>
+                <div class="theServices">
+                    <img src="pic/guaantee.png">
+                    <h4>Guarantee</h4>
+                    <p>TO make sure is perfect, we take all responsibility</p>
+                    <form action="ComingSoon.html" method="get">
+                    <button>Read more...</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="newgame">
+            <h6>Top expected GAME</h6>
+            <div class="picture">
+                <img src="pic/anthem-golem-concept-art-4k-pv-1920x1080.jpg" class="image">
+                <div class="textRun">
+                    <div class="nameGame">Anthem</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/chloe-price-max-caulfield-life-is-strange-4k-k4-1920x1080.jpg"  class="image">
+                <div class="textRun">
+                    <div class="nameGame">Life is Strange 2</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/just-cause-4-4k-stormnight-3t-1920x1080.jpg"  class="image">
+                <div class="textRun">
+                    <div class="nameGame">Just Cause 4</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/skriver-in-cyberpunk-2077-oz-1920x1080.jpg" class="image">
+                <div class="textRun">
+                    <div class="nameGame">Cyperpunk 2077</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/devil-may-cry-5-key-art-4k-q8-1920x1080.jpg" class="image">
+                <div class="textRun">
+                    <div class="nameGame">DMC5</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/darksiders-iii-2018-4k-3c-1920x1080.jpg" class="image">
+                <div class="textRun">
+                    <div class="nameGame">Dark Sider 3</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/beyond-good-and-evil-2-2017-74-1920x1080.jpg" class="image">
+                <div class="textRun">
+                    <div class="nameGame">Beyond Good and Devil 2</div>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="pic/god-of-war-4-atreus-8e-1920x1080.jpg" class="image">
+                <div class="textRun">
+                    <div class="nameGame">God of war 4</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="contact">
+                <h5>Contact</h5>
+                <span>&#9993 ex@gmail.com</span>
+                <span>&#x260E 123456</span>
+                <span>&#x2706 456789</span>
+                <span>&#9983 Location,k......</span>
+            </div>
+            <div class="lastestGame">
+                <h5>Lastest Games</h5>
+                <br />
+                <img src="pic/anthem-golem-concept-art-4k-pv-1920x1080.jpg">
+                <img src="pic/beyond-good-and-evil-2-2017-74-1920x1080.jpg">
+                <img src="pic/chloe-price-max-caulfield-life-is-strange-4k-k4-1920x1080.jpg">
+                <img src="pic/darksiders-iii-2018-4k-3c-1920x1080.jpg">
+                <img src="pic/devil-may-cry-5-key-art-4k-q8-1920x1080.jpg">
+                <img src="pic/franklin-clinton-gta-v-dk-1920x1080.jpg">
+                <img src="pic/god-of-war-4-atreus-8e-1920x1080.jpg">
+                <img src="pic/horizon_zero_dawn_2017_video_game-wallpaper-1920x1080.jpg">
+            </div>
+            <div class="lastCredit">
+                <a href="Home.html"><h4>GameHUB</h4></a>
+                <p>This is the describe part !! Insert whatever you want!!</p>
+            </div>
+        </div>
+    </body>
+</html>
